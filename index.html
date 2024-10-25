@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<div class="box">
+    <div class="loginBox">
+      <div class="textBox">
+        <span>登录</span>
+        <span>Sign in</span>
+      </div>
+      <div class="inpBox">
+        <img src="./img/user.png" alt="">
+        <input id="userName" type="text" placeholder="请输入用户名">
+      </div>
+      <div class="inpBox">
+        <img src="./img/password.png" alt="">
+        <input id="passwordVal" type="password" placeholder="请输入密码">
+      </div>
+      <div class="textBox2">
+        <span>验证码登录</span>
+        <span>忘记密码</span>
+      </div>
+      <div class="btnBox" onclick="loginClick()">登 录</div>
+      <div class="btnBox2">立即注册</div>
+    </div>
+    <div class="textBox3">
+      为了您更好的使用，<br/>
+      &emsp;&emsp;我们将不懈努力。
+    </div>
+  </div>
+  </body>
+  <script>
+    // 这是点击登录事件
+    function loginClick(){
+      // 获取用户名
+      var userName=document.getElementById('userName').value
+      // 获取密码
+      var passwordVal=document.getElementById('passwordVal').value
+      // 如果用户名等于tydj并且密码等于123456则跳转页面，否则提示账号或密码错误！
+      if(userName==='tydj'&&passwordVal==="123456"){
+        window.location.href='https://tim-qwq.github.io/xhgab03/'
+      }else{
+        alert('账号或密码错误！')
+      }
+    }
+  </script>
+  <style>
+       *{
+      margin:0;
+      padding:0;
+    }
+    .box{
+      width:100%;
+      height:100vh;
+      background-image: url('https://ts1.cn.mm.bing.net/th/id/R-C.8d08c690dd8f7a3da25ab085835c2baf?rik=saB2Iuf%2f7Kz29A&riu=http%3a%2f%2fi2.img.969g.com%2fdown%2fimgx2014%2f10%2f24%2f289_102451_0206a.jpg&ehk=PR02tVhFKoSL%2fnOqVwVe57zCTPVeFQ6%2bqKWRr7CLRz0%3d&risl=&pid=ImgRaw&r=0');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+    .loginBox{
+      background-color:rgba(255, 255, 255, 0.6);
+      width:250px;
+      height:300px;
+      padding:25px 15px;
+      position: absolute;
+      right:100px;
+      top: calc(50% - 170px);
+      /* x轴偏移量 y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色 */
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.6);
+    }
+    .textBox{
+      margin-bottom:20px;
+    }
+    .textBox :nth-child(1){
+      color:#FF5300;
+      font-size: 20px;
+    }
+    .textBox :nth-child(2){
+      color:#b1b1b1;
+      font-size: 12px;
+    }
+    .inpBox{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background: white;
+      border-radius: 25px;
+      padding:5px;
+      margin-bottom: 15px;
+    }
+    .inpBox img{
+      margin-right:10px;
+    }
+    .inpBox input{
+      border: none;
+      outline: none;
+    }
+    .textBox2{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color:#FF5300;
+    }
+    .textBox2 span{
+      border-bottom: 1px solid #FF5300;
+      cursor: pointer;
+    }
+    .btnBox{
+      padding:10px;
+      font-size: 14px;
+      background: #FF5300;
+      color:white;
+      text-align: center;
+      border-radius: 25px;
+      margin-top:20px;
+      cursor: pointer;
+    }
+    .btnBox2{
+      width:50px;
+      text-align: center;
+      margin: 10px auto;
+      color:#4e4e4e;
+      font-size: 12px;
+      cursor: pointer;
+      border-bottom: 1px solid #4e4e4e;
+    }
+    .textBox3{
+      font-size: 20px;
+      color:white;
+      position:absolute;
+      bottom: 50px;
+      left:50px;
+    }
+  </style>
